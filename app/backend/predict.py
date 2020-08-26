@@ -12,7 +12,7 @@ def predict_image(im):
     #image = image.numpy()
    
     preds = model.predict(image)
-    probs, class_idx = tf.math.top_k(preds, k=1) #change to top 1 and get the exact result
+    probs, class_idx = tf.math.top_k(preds, k=1)
     class_names = ['G43', 'M17', 'S29']
     classes=[]
     for i in class_idx.numpy()[0]:

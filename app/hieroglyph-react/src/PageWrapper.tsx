@@ -11,6 +11,7 @@ const DivPage1 = styled.div`
 `;
 
 const Div = styled.div`
+  text-align: center;
   min-height: 38em;
 `;
 

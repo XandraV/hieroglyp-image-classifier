@@ -8,8 +8,8 @@ type Header = {
 
 const Header: FC<Header> = ({ title }) => (
   <AppBar position="relative" style={{backgroundColor:"#e0bb6e"}}>
-    <Toolbar>
-      <Typography variant="h6" color="inherit" noWrap>
+    <Toolbar style={{display:"grid"}}>
+      <Typography variant="h6" color="inherit" align="center" noWrap>
         {title}
       </Typography>
     </Toolbar>
