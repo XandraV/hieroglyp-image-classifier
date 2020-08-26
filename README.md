@@ -1,6 +1,6 @@
-# Hieroglyph Image Classifier
+# Glyph Image Classifier
 
-Image classifier project that combines React frontend (TypeScript, Material-UI) with a Flask(Python) backend that allows the user to upload and identify a hieroglyph. The predictive model was built byusing Python and TensorFlow.
+Image classifier project that combines **React(TypeScript)** frontend with a **Flask(Python)** backend that allows the user to upload and identify a hieroglyph. The **predictive model** was built by using Python and **TensorFlow**.
 
 ![app](app/hieroglyph-react/src/assets/readme.png)
 
