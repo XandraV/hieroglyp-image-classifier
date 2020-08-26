@@ -69,8 +69,9 @@ export default function Page1() {
                   Egyptian Hieroglyphs
                 </Typography>
                 <Typography>
-                  This is a media card. You can use this section to describe the
-                  content.
+                  Egyptian hieroglyphs with a total of some 1,000 distinct
+                  characters were the formal writing system used in Ancient
+                  Egypt.
                 </Typography>
               </CardContent>
               <CardActions className={classes.buttonwrapper}>
@@ -93,8 +94,8 @@ export default function Page1() {
                   Mayan Glyphs
                 </Typography>
                 <Typography>
-                  This is a media card. You can use this section to describe the
-                  content.
+                  Maya script, also known as Maya glyphs, was the writing system
+                  of the Maya civilization of Mesoamerica.
                 </Typography>
               </CardContent>
               <CardActions className={classes.buttonwrapper}>
