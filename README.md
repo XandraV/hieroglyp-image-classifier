@@ -2,9 +2,9 @@
 
 Image classifier project that combines React frontend (TypeScript, Material-UI) with a Flask(Python) backend that allows the user to upload and identify a hieroglyph. The predictive model was built byusing Python and TensorFlow.
 
-![lol](src/assets/readme.png)
+![app](app/hieroglyph-react/src/assets/readme.png)
 
-Frontend source code can be found[here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react).
+Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react).
 
 Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/).
 
