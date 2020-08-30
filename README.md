@@ -18,7 +18,7 @@ Clone the master branch and then run the following scripts in the project direct
 
 - `npm start` - start the react app
 
-You will need to have the latest version of Python 3, pip and Flask on your machine. [Here](https://flask.palletsprojects.com/en/1.1.x/installation/) you can find the official guide on how to set up a flask server.
+You will need to have the latest version of Python 3, pip and Flask installed on your machine. [Here](https://flask.palletsprojects.com/en/1.1.x/installation/) you can find the official guide on how to set up a flask server.
 
 ## Resources
 
