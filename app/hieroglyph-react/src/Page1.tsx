@@ -63,7 +63,7 @@ export default function Page1() {
         >
           <Grid item key={1} xs={4}>
             <Card className={classes.card}>
-              <img src={hieroglyphfrontpage} width={260} height={200} />
+              <img src={"https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/hieroglyphfrontpage.jpg"} width={260} height={200} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Egyptian Hieroglyphs
@@ -88,7 +88,7 @@ export default function Page1() {
           </Grid>
           <Grid item key={2} xs={4}>
             <Card className={classes.card}>
-              <img src={mayan} width={260} height={200} />
+              <img src={"https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/mayan.png"} width={260} height={200} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Mayan Glyphs
