@@ -43,6 +43,10 @@ const HieroglyphPage: FC = () => {
     setFiles(e);
   };
 
+  const onDelete = () => {
+    setPred("");
+  }
+
   function handleClick() {
     fetch(`http://localhost:5000/prediction`, {
       method: "POST",
@@ -73,6 +77,7 @@ const HieroglyphPage: FC = () => {
           filesLimit={1}
           maxFileSize={100000000}
           onChange={onChange}
+          onDelete={onDelete}
         />
         <Card className={classes.card}>
           {(hieroglyphData as any)[pred] ? (
