@@ -4,7 +4,7 @@ Image classifier project that combines **React(TypeScript)** frontend with a **F
 
 ![app](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/hieroglyph.gif)
 
-Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react).
+Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react) and you can visit the deployed react app(without backend) [here](https://master.d2zd0hmxbpbx32.amplifyapp.com).
 
 Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/).
 
