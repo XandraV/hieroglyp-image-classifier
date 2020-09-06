@@ -7,7 +7,6 @@ type PageWrapperProps = {
 
 const DivPage1 = styled.div`
   min-height: 38em;
-  background-color: #e0bb6e;
 `;
 
 const Div = styled.div`

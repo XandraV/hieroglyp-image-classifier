@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import PageWrapper from "./PageWrapper";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { purple, teal } from "@material-ui/core/colors";
+import { purple } from "@material-ui/core/colors";
 import { Link } from "react-router-dom";
 import hieroglyphfrontpage from "./assets/hieroglyphfrontpage.jpg";
 import mayan from "./assets/mayan.png";
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: teal[400],
+    backgroundColor: "rgb(224, 187, 110)",
     height: "100%",
     display: "flex",
     flexDirection: "column",
@@ -47,7 +47,7 @@ export default function Page1() {
             component="h1"
             variant="h3"
             align="center"
-            color="textPrimary"
+            color="textSecondary"
             gutterBottom
           >
             Glyph Identifier

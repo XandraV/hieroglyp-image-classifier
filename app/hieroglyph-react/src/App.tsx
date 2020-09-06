@@ -5,15 +5,14 @@ import HieroglyphPage from "./HieroglyphPage";
 import MayanGlyphPage from "./MayanGlyphPage";
 import Page1 from "./Page1";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { purple, teal, orange } from "@material-ui/core/colors";
+import { purple } from "@material-ui/core/colors";
 
 const glyphTheme = createMuiTheme({
   palette: {
     primary: purple,
-    secondary: teal,
     text: {
       primary: "rgba(255,255,255)",
-      secondary: orange[300],
+      secondary: "rgb(224, 187, 110)",
     },
   },
   typography: {

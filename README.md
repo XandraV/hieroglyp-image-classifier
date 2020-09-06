@@ -12,13 +12,26 @@ Backend source code can be found [here](https://github.com/XandraV/hieroglyp-ima
 
 ## Installation
 
-Clone the master branch and then run the following scripts in the project directory:
+Clone the master branch and then run the following scripts from the hieroglyph-react folder:
 
 - `npm install` - to install relevant dependencies
 
 - `npm start` - start the react app
 
-You will need to have the latest version of Python 3, pip and Flask installed on your machine. [Here](https://flask.palletsprojects.com/en/1.1.x/installation/) you can find the official guide on how to set up a flask server.
+You will need to have the latest version of [Python 3](https://www.python.org/downloads/), [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/) and [Tensorflow](https://www.tensorflow.org/install/) installed on your machine.
+
+You can install the relevant dependencies by running the following scripts:
+- `pip install Flask` - to install Flask
+
+- `pip3 install pillow` - to install PIL(Python Imaging Library)
+
+- `pip install flask-cors` - to install a Flask extension for handling Cross Origin Resource Sharing
+
+- `pip install tensorflow` - to install TensorFlow
+
+- `pip install tensorflow-hub` - to install TensorFlow Hub
+
+- `python app.py` - to start the flask server from app/backend folder
 
 ## Resources
 
@@ -28,3 +41,4 @@ You will need to have the latest version of Python 3, pip and Flask installed on
 | Library that utilises tagged template literals to style components | [styled components](https://styled-components.com/)                       |
 | Flask web application framework                                    | [Flask](https://flask.palletsprojects.com/en/1.1.x/)                      |
 | React - JavaScript library for building user interfaces            | [create-react-app](https://github.com/facebook/create-react-app)          |
+|TensorFlow - open source library to develop and train ML models| [TensorFlow](https://www.tensorflow.org/) 

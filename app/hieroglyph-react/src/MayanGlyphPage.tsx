@@ -3,49 +3,48 @@ import { Button } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Container from "@material-ui/core/Container";
+import { DropzoneArea } from "material-ui-dropzone";
 import Grid from "@material-ui/core/Grid";
 import PageWrapper from "./PageWrapper";
-import UploadButton from "./UploadButton";
+import styled from "styled-components/macro";
 import UploadedImageAnimation from "./UploadedImageAnimation";
 import { makeStyles } from "@material-ui/core/styles";
 import hieroglyphData from "./data";
 
 const useStyles = makeStyles((theme) => ({
-  content: {
-    padding: theme.spacing(3, 0, 0),
-  },
   cardGrid: {
-    flexGrow: 1,
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-  },
-  cardsContainer: {
-    justifyContent: "center",
+    padding: "2em",
+    "& .MuiDropzonePreviewList-root": {
+      justifyContent: "center",
+    },
   },
   card: {
-    height: "100%",
     display: "flex",
     flexDirection: "column",
   },
   cardContent: {
     color: "black",
+    fontFamily: "Segoe UI",
+  },
+  dropzone: {
+    marginBottom: "1em",
   },
 }));
+
 const MayanGlyphPage: FC = () => {
   const classes = useStyles();
   const [pred, setPred] = useState("");
-  const [imageToUpload, setImageToUpload] = useState("");
-  const [imageURL, setImageURL] = useState("");
+  const [files, setFiles] = useState([]);
 
   const data = new FormData();
-  data.append("file", imageToUpload);
+  data.append("file", files[0]);
 
   const onChange = (e: any) => {
-    setImageToUpload(e.target.files[0]);
-    setImageURL(URL.createObjectURL(e.target.files[0]));
+    setFiles(e);
   };
+
   function handleClick() {
-    fetch(`http://localhost:5000/predict0`, {
+    fetch(`http://localhost:5000/prediction`, {
       method: "POST",
       body: data,
     })
@@ -61,36 +60,36 @@ const MayanGlyphPage: FC = () => {
 
   return (
     <PageWrapper pageName="maya">
-      <Container className={classes.cardGrid}>
-        <Grid
-          className={classes.cardsContainer}
-          container
-          justify="center"
-          spacing={4}
-        >
-          <Grid item key={1} xs={8}>
-            <Card className={classes.card}>
-              <UploadedImageAnimation
-                glyphSrc={imageURL}
-                checked={imageToUpload === "" ? false : true}
-              />
-              {(hieroglyphData as any)[pred] ? (
-                <CardContent className={classes.cardContent}>
-                  Prediction: {pred}
-                  <div>meaning: {(hieroglyphData as any)[pred].meaning}</div>
-                  <div>logogram: {(hieroglyphData as any)[pred].logogram}</div>
-                </CardContent>
-              ) : (
-                ""
-              )}{" "}
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
+      <Grid
+        className={classes.cardGrid}
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+        <DropzoneArea
+          dropzoneClass={classes.dropzone}
+          dropzoneText={"Drag and drop an image here or click to upload"}
+          filesLimit={1}
+          maxFileSize={100000000}
+          onChange={onChange}
+        />
+        <Card className={classes.card}>
+          {(hieroglyphData as any)[pred] ? (
+            <CardContent className={classes.cardContent}>
+              Prediction: {pred}
+              <div>meaning: {(hieroglyphData as any)[pred].meaning}</div>
+              <div>logogram: {(hieroglyphData as any)[pred].logogram}</div>
+            </CardContent>
+          ) : (
+            ""
+          )}{" "}
+        </Card>
+      </Grid>
+
       <Button onClick={handleClick} variant="contained" color="primary">
         predict
       </Button>
-      <UploadButton onChange={onChange} />
     </PageWrapper>
   );
 };

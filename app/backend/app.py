@@ -5,7 +5,7 @@ from predict import predict_image
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/predict0', methods=["POST"])
+@app.route('/prediction', methods=["POST"])
 def get_prediction():
     file = request.files['file']
     im = Image.open(file).convert('RGB')
