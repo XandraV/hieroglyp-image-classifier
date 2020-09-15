@@ -2,12 +2,9 @@ import React, { useState, FC } from "react";
 import { Button } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Container from "@material-ui/core/Container";
 import { DropzoneArea } from "material-ui-dropzone";
 import Grid from "@material-ui/core/Grid";
 import PageWrapper from "./PageWrapper";
-import styled from "styled-components/macro";
-import UploadedImageAnimation from "./UploadedImageAnimation";
 import { makeStyles } from "@material-ui/core/styles";
 import hieroglyphData from "./data";
 
