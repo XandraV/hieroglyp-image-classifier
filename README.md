@@ -17,9 +17,9 @@ Image classifier project that combines **React(TypeScript)** frontend with a **F
 
 ![app](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/hieroglyph.gif)
 
-Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react) and is automated with continuous deployment on [AWS Amplify](https://aws.amazon.com/amplify/). You can visit the deployed react app(without backend) [here](https://master.d2zd0hmxbpbx32.amplifyapp.com).
+Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react) :octocat: and is automated with continuous deployment on [AWS Amplify](https://aws.amazon.com/amplify/). You can visit the deployed react app(without backend) [here](https://master.d2zd0hmxbpbx32.amplifyapp.com).
 
-Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/).
+Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/) :octocat: .
 
 [Data folder](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/data) contains the data that was used in `hieroglyp_identifier.ipynb` to create the model in `saved_model.h5`.
 
