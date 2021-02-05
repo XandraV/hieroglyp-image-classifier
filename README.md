@@ -21,7 +21,7 @@ Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-im
 
 Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/).
 
-[Data folder](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/data) contains the data that was used in `hieroglyp_identifier.ipynb` to create the model in `saved_model.h5`.
+[Data folder](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/data) contains the data that was used in `egyptian_hieroglyphs_identifier_cnn.ipynb` to create the model in `model1.h5`.
 
 ## Installation
 

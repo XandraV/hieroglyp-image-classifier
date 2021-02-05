@@ -13,6 +13,10 @@ const hieroglyphData = {
         meaning:"w, u",
         logogram:"quail chick",
     },
+    X1: {
+        meaning: "letter T, feminine",
+        logogram: "bread bun"
+    }
   };
   
   export default hieroglyphData;

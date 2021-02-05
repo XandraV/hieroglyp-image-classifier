@@ -13,7 +13,7 @@ def predict_image(im):
    
     preds = model.predict(image)
     probs, class_idx = tf.math.top_k(preds, k=1)
-    class_names = ['G43', 'M17', 'S29']
+    class_names = ['G43', 'M17', 'S29', 'X1']
     classes=[]
     for i in class_idx.numpy()[0]:
         classes.append(class_names[i])

@@ -14,7 +14,6 @@
     "@types/react-dom": "^16.9.7",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0",
-    "deepmerge": "^4.2.2",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-expect-message": "^1.0.2",
     "material-ui-dropzone": "^3.4.0",
