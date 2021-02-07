@@ -1,6 +1,4 @@
-
-![contributors](https://img.shields.io/github/contributors/XandraV/hieroglyp-image-classifier?color=gold)
-![commit](https://img.shields.io/github/last-commit/XandraV/hieroglyp-image-classifier?color=cyan)
+![commit](https://img.shields.io/github/last-commit/XandraV/hieroglyph-image-classifier?color=cyan)
 
 
 # Hieroglyph Image Classifier
@@ -13,38 +11,60 @@
 ![tensorflow](https://img.shields.io/badge/-Tensorflow-FF6F00?style=flat-square&logo=Tensorflow&logoColor=white)
 ![aws](https://img.shields.io/badge/-Amazon%20AWS-007ACC?style=flat-square&logo=Amazon%20Aws&logoColor=white)
 
-Image classifier project that combines **React(TypeScript)** frontend with a **Flask(Python)** backend that allows the user to upload and identify a hieroglyph. The **predictive model** was built by using Python and **TensorFlow**.
+Image classifier project that combines **React(TypeScript)** frontend with a **Flask(Python)** backend to identify hieroglyphs in uploaded images. The **predictive model** was built in Python with **TensorFlow**.
 
-![app](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/hieroglyph.gif)
+## **Folder Structure**
+```
+hieroglyph-image-classifier
+├── backend
+|   ├── app.py
+|   ├── configurations.py
+|   ├── predict.py
+│   └── saved_model.h5.js
+├── frontend
+|   ├──public
+|   |  ├── favicon.ico
+|   |  └── index.html
+│   ├── src
+│   │   ├── images
+│   │   │   ├── G43.png
+│   │   │   ├── M17.png
+│   │   │   ├── S29.png
+│   │   │   └── X1.png
+|   |   ├── App.tsx
+|   |   ├── data.tsx
+|   |   ├── Header.tsx
+|   |   ├── HieroglyphPage.tsx
+|   |   ├── index.tsx
+|   |   ├── PageWrapper.tsx
+|   |   ├── react-app-env.d.ts
+|   |   └── UploadedImageAnimation.tsx
+|   |
+│   ├── .gitignore      
+│   ├── package.json          
+│   └── tsconfig.json
+|       
+└── ml
+    ├── egyptian_hieroglyphs_identifier_cnn.ipynb
+    └── model1.h5
+```
+The code I wrote to generate the model can be found in `ml/egyptian_hieroglyphs_identifier_cnn.ipynb`. To run the fully functional web app you will only need the `frontend` and `backend` folders.
 
-Frontend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/hieroglyph-react) :octocat: and is automated with continuous deployment on [AWS Amplify](https://aws.amazon.com/amplify/). You can visit the deployed react app(without backend) [here](https://master.d2zd0hmxbpbx32.amplifyapp.com).
+[Here](https://github.com/morrisfranken/glyphreader) :octocat: you can find the data that I used to create the model `saved_model.h5`.
 
-Backend source code can be found [here](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/app/backend/) :octocat: .
+## **Installation**
 
-[Data folder](https://github.com/XandraV/hieroglyp-image-classifier/tree/master/data) contains the data that was used in `egyptian_hieroglyphs_identifier_cnn.ipynb` to create the model in `model1.h5`.
-
-## Installation
-
-Clone the master branch and then run the following scripts from the hieroglyph-react folder:
+Clone the master branch and then run the following scripts from the `./frontend` folder:
 
 - `npm install` - to install relevant dependencies
 
 - `npm start` - start the react app
 
 You will need to have the latest version of [Python 3](https://www.python.org/downloads/), [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/) and [Tensorflow](https://www.tensorflow.org/install/) installed on your machine.
+You can install the relevant dependencies by running the following script:
+- `pip install Flask flask-cors pillow tensorflow tensorflow-hub` - to install relevant dependencies
 
-You can install the relevant dependencies by running the following scripts:
-- `pip install Flask` - to install Flask
-
-- `pip3 install pillow` - to install PIL(Python Imaging Library)
-
-- `pip install flask-cors` - to install a Flask extension for handling Cross Origin Resource Sharing
-
-- `pip install tensorflow` - to install TensorFlow
-
-- `pip install tensorflow-hub` - to install TensorFlow Hub
-
-- `python app.py` - to start the flask server from app/backend folder
+- `python app.py` - to start the flask server from the `./backend` folder
 
 ## Resources
 
@@ -55,8 +75,4 @@ You can install the relevant dependencies by running the following scripts:
 | Flask web application framework                                    | [Flask](https://flask.palletsprojects.com/en/1.1.x/)                      |
 | React - JavaScript library for building user interfaces            | [create-react-app](https://github.com/facebook/create-react-app)          |
 |TensorFlow - open source library to develop and train ML models| [TensorFlow](https://www.tensorflow.org/) 
-|AWS Amplify |  [Amplify](https://aws.amazon.com/amplify/)
 
-## Created with create-react-app
-
-This app was created with [create-react-app](https://github.com/facebook/create-react-app), see usage guidelines in [create-react-app-readme.md](create-react-app-readme.md)
