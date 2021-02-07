@@ -3,7 +3,7 @@
 ![commit](https://img.shields.io/github/last-commit/XandraV/hieroglyp-image-classifier?color=cyan)
 
 
-# Glyph Image Classifier
+# Hieroglyph Image Classifier
 
 ![typescript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
 ![react](https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white)
