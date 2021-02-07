@@ -23,11 +23,6 @@ hieroglyph-image-classifier
 ├── frontend
 |   ├──public
 │   ├── src
-│   │   ├── images
-│   │   │   ├── G43.png
-│   │   │   ├── M17.png
-│   │   │   ├── S29.png
-│   │   │   └── X1.png
 |   |   ├── App.tsx
 |   |   ├── data.tsx
 |   |   ├── Header.tsx
