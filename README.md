@@ -9,7 +9,6 @@
 ![material-ui](https://img.shields.io/badge/-MaterialUI-0081CB?style=flat-square&logo=material-ui&logoColor=white)
 ![python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![tensorflow](https://img.shields.io/badge/-Tensorflow-FF6F00?style=flat-square&logo=Tensorflow&logoColor=white)
-![aws](https://img.shields.io/badge/-Amazon%20AWS-007ACC?style=flat-square&logo=Amazon%20Aws&logoColor=white)
 
 Image classifier project that combines **React(TypeScript)** frontend with a **Flask(Python)** backend to identify hieroglyphs in uploaded images. The **predictive model** was built in Python with **TensorFlow**.
 
@@ -23,8 +22,6 @@ hieroglyph-image-classifier
 │   └── saved_model.h5.js
 ├── frontend
 |   ├──public
-|   |  ├── favicon.ico
-|   |  └── index.html
 │   ├── src
 │   │   ├── images
 │   │   │   ├── G43.png
