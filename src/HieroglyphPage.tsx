@@ -42,10 +42,15 @@ const HieroglyphPage: FC = () => {
 
   const onDelete = () => {
     setPred("");
-  }
+  };
 
   function handleClick() {
-    fetch(`http://localhost:5000/prediction`, {
+    fetch(`https://hieroglyph-image-classifier.herokuapp.com/prediction`, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        charset: "UTF-8",
+      },
       method: "POST",
       body: data,
     })
