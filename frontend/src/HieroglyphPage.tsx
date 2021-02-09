@@ -69,9 +69,9 @@ const HieroglyphPage: FC = () => {
   return (
     <PageWrapper>
       <Row>
-        <Col>
+        <Col >
           <h3>Egyptian Hieroglyphs</h3>
-          <div>
+          <div className="pb-3">
             Egyptian hieroglyphs were the formal writing system used in Ancient
             Egypt. Hieroglyphs combined logographic, syllabic and alphabetic
             elements, with a total of some 1,000 distinct characters.
