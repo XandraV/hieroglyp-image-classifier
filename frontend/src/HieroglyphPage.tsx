@@ -32,6 +32,7 @@ const useStyles = makeStyles(() => ({
     borderColor: "white",
     background: "transparent",
     minHeight: "350px",
+    outline: "none"
   },
 }));
 

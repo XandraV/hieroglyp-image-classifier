@@ -1,11 +1,11 @@
 const hieroglyphData = {
     M17: {
-        meaning:"I, me, my",
+        meaning:"e",
         logogram:"reed leaf",
     },
     
     S29: {
-        meaning:"she, her, it",
+        meaning:"c",
         logogram:"folded cloth",
     },
     
@@ -14,7 +14,7 @@ const hieroglyphData = {
         logogram:"quail chick",
     },
     X1: {
-        meaning: "letter T, feminine",
+        meaning: "t",
         logogram: "bread bun"
     }
   };
