@@ -43,6 +43,7 @@ hieroglyph-image-classifier
 The code I wrote to generate the model can be found in `ml/egyptian_hieroglyphs_identifier_cnn.ipynb`. To run the fully functional web app you will only need the `frontend` and `backend` folders.
 
 [Here](https://github.com/morrisfranken/glyphreader) :octocat: you can find the data that I used to create the model `saved_model.h5`.
+
 The classifier was trained to recognize 4 different hieroglyphs and predict their [Gardiner](https://en.wikipedia.org/wiki/Gardiner%27s_sign_list) labels:
 
 **S29** | **M17** | **X1** | **G43**
