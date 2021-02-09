@@ -44,11 +44,11 @@ The code I wrote to generate the model can be found in `ml/egyptian_hieroglyphs_
 
 [Here](https://github.com/morrisfranken/glyphreader) :octocat: you can find the data that I used to create the model `saved_model.h5`.
 
-The classifier was trained to recognize 4 different hieroglyphs and predict their [Gardiner](https://en.wikipedia.org/wiki/Gardiner%27s_sign_list) labels:
+The classifier was trained to recognize hieroglyphs and predict their [Gardiner](https://en.wikipedia.org/wiki/Gardiner%27s_sign_list) labels:
 
-**S29** | **M17** | **X1** | **G43**
-| - | - | - | - |
-![s29](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/S29.png) | ![m17](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/M17.png) | ![x1](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/X1.png) | ![g43](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/G43.png)
+ **M17** | **X1** | **G43**
+| - | - | - |
+![m17](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/M17.png) | ![x1](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/X1.png) | ![g43](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/G43.png)
 
 ## **Installation**
 
