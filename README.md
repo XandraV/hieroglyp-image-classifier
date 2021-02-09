@@ -12,6 +12,8 @@
 
 Image classifier project that combines **React(TypeScript)** frontend with a **Flask(Python)** backend and uses a **predictive model** built in Python with **TensorFlow** to identify hieroglyphs in uploaded images.
 
+![gif](https://general-gif-bucket.s3.eu-west-2.amazonaws.com/hieroglyphs.gif)
+
 ## **Folder Structure**
 ```
 hieroglyph-image-classifier
@@ -46,9 +48,9 @@ The code I wrote to generate the model can be found in `ml/egyptian_hieroglyphs_
 
 The classifier was trained to recognize hieroglyphs and predict their [Gardiner](https://en.wikipedia.org/wiki/Gardiner%27s_sign_list) labels:
 
- **M17** | **X1** | **G43**
-| - | - | - |
-![m17](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/M17.png) | ![x1](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/X1.png) | ![g43](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/G43.png)
+**X1** | **G43**
+| - | - |
+![x1](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/X1.png) | ![g43](https://hieroglyphidentifier.s3.eu-west-2.amazonaws.com/G43.png)
 
 ## **Installation**
 
