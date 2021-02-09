@@ -1,30 +1,37 @@
 import React, { useState, FC } from "react";
-import { Button } from "@material-ui/core";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { DropzoneArea } from "material-ui-dropzone";
-import Grid from "@material-ui/core/Grid";
 import PageWrapper from "./PageWrapper";
 import { makeStyles } from "@material-ui/core/styles";
 import hieroglyphData from "./data";
+import Alphabet from "./Alphabet";
 
-const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    padding: "2em",
-    "& .MuiDropzonePreviewList-root": {
-      justifyContent: "center",
-    },
-  },
+const useStyles = makeStyles(() => ({
   card: {
     display: "flex",
     flexDirection: "column",
-  },
-  cardContent: {
-    color: "black",
-    fontFamily: "Segoe UI",
+    background: "transparent",
+    color: "white",
   },
   dropzone: {
+    "& .MuiDropzonePreviewList-root": {
+      justifyContent: "center",
+    },
+    "& 	.MuiDropzoneArea-icon": {
+      color: "white",
+    },
+    "& .MuiDropzoneArea-text": {
+      fontSize: 15,
+      color: "white",
+    },
     marginBottom: "1em",
+    borderColor: "white",
+    background: "transparent",
+    minHeight: "350px",
   },
 }));
 
@@ -60,38 +67,44 @@ const HieroglyphPage: FC = () => {
   }
 
   return (
-    <PageWrapper pageName="hieroglyph">
-      <Grid
-        className={classes.cardGrid}
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-      >
-        <DropzoneArea
-          dropzoneClass={classes.dropzone}
-          dropzoneText={"Drag and drop an image here or click to upload"}
-          filesLimit={1}
-          maxFileSize={100000000}
-          onChange={onChange}
-          onDelete={onDelete}
-        />
-        <Card className={classes.card}>
-          {(hieroglyphData as any)[pred] ? (
-            <CardContent className={classes.cardContent}>
-              Prediction: {pred}
-              <div>meaning: {(hieroglyphData as any)[pred].meaning}</div>
-              <div>logogram: {(hieroglyphData as any)[pred].logogram}</div>
-            </CardContent>
-          ) : (
-            ""
-          )}{" "}
-        </Card>
-      </Grid>
+    <PageWrapper>
+      <Row>
+        <Col>
+          <h3>Egyptian Hieroglyphs</h3>
+          <div>
+            Egyptian hieroglyphs were the formal writing system used in Ancient
+            Egypt. Hieroglyphs combined logographic, syllabic and alphabetic
+            elements, with a total of some 1,000 distinct characters.
+          </div>
+          <Alphabet />
+        </Col>
+        <Col>
+          <DropzoneArea
+            dropzoneClass={classes.dropzone}
+            dropzoneText={"Drag and drop an image here or click to upload"}
+            filesLimit={1}
+            maxFileSize={100000000}
+            onChange={onChange}
+            onDelete={onDelete}
+            showAlerts={false}
+          />
+          <Card className={classes.card}>
+            {(hieroglyphData as any)[pred] && (
+              <CardContent>
+                Prediction: {pred}
+                <div>meaning: {(hieroglyphData as any)[pred].meaning}</div>
+                <div>logogram: {(hieroglyphData as any)[pred].logogram}</div>
+              </CardContent>
+            )}
+          </Card>
 
-      <Button onClick={handleClick} variant="contained" color="primary">
-        predict
-      </Button>
+          {!pred && (
+            <Button variant="outline-light" size="sm" onClick={handleClick}>
+              IDENTIFY
+            </Button>
+          )}
+        </Col>
+      </Row>
     </PageWrapper>
   );
 };
